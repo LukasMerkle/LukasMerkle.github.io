@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lukas Merkle</title>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/3-col-portfolio.css" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
+
+  <script type='text/javascript' src='/js/jquery.min.js'></script>
+  <script type='text/javascript' src='/js/bootstrap.bundle.min.js'></script>
+  <script type='text/javascript' src='/js/jquery.mobile.customized.min.js'></script>
+  <script type='text/javascript' src='/js/jquery.easing.1.3.js'></script> 
+  <script type='text/javascript' src='/js/camera.js'></script> 
+  <script type='text/javascript' src='/js/carosel.js'></script> 
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script type='text/javascript' src='/js/responsive_youtube.js'></script>
+
+  
+  
+
+
+  <link rel='stylesheet' id='camera-css'  href='/css/camera.css' type='text/css' media='all'> 
+  <link rel='stylesheet' href='/css/carosel.css' type='text/css' media='all'> 
+
+  
+  
+</head>
+
+
+
+<body>
+<div class="content" id="content">
+<p><a href="/">Back to all Projects</a>
+
+</p>
+<br>
+
+
+
+<h2>Object Recognition with Faster R-CNN</h2>
+
+
+<h3>My Contribution Highlights</h3>
+<ul>
+  
+  <li>Modified Faster R-CNN and trained on collected data to classify pallets, forklifts and robots</li>
+
+  <li>Implemented augmentation algorithm (rotation, scale, etc.) to speed up labeling process</li>
+
+  <li>Developed pipeline to retrain on labels created by neural network (Semi-supervised learning)</li>
+
+</ul>
+
+
+
+<div class="container-fluid media-gallery-container">
+  <div id="myCarousel" class="carousel slide media-gallery"
+    data-ride="carousel" data-interval=false>
+    <div class="carousel-inner row w-100 mx-auto">
+        
+        <div class="carousel-item col-md-4
+        
+          active 
+        
+          ">
+          <div class="card">
+            
+              <img class="card-img-top img-fluid" src="/images/forklifts.png"
+            height=600>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Detection and classification of forklifts in a warehouse</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item col-md-4
+        
+          ">
+          <div class="card">
+            
+              <img class="card-img-top img-fluid" src="/images/pallet.png"
+            height=600>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Detection and classification of (solely) pallets in a warehouse</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item col-md-4
+        
+          ">
+          <div class="card">
+            
+              <img class="card-img-top img-fluid" src="/images/augment2.png"
+            height=600>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Augmentation sample for labeled image with a forklift</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item col-md-4
+        
+          ">
+          <div class="card">
+            
+              <img class="card-img-top img-fluid" src="/images/pipeline_rcnn.png"
+            height=600>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Proposed pipeline for manual semi-supervised learning</p>
+              
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<h3>Project Info</h3>
+<ul>
+  
+    <li>Robot Type: Object Detection Algorithm</li>
+    <li>Application: Warehouse Automation</li>
+  
+  <li>Organization: 
+    
+       
+        <a href="https://www.still.de/en-DE.html"> 
+      
+      Still GmbH
+       
+        </a> 
+      
+
+      
+    
+  
+  </li>
+  
+    <li>Personal Role: Perception Intern, May 2019 – August 2019</li>
+  
+</ul>
+
+
+
+<h3>More About My Experience</h3>
+<p>
+  <p>The main goal of this project was to detect and classify objects that are typically seen in warehouses, such as pallets, forklifts and boxes. These detections can then be further used for navigation or manipulation tasks. To achieve this, it was decided to use Faster R-CNN, since it has shown promising results in the community and performs well in terms of accuracy as well as speed.</p>
+
+<p>First, one network was trained for each object. Once these networks perform relatively well, they can be used to create more labeled data, since the network is now able to reliable label images by itself. All of the previously labeled data as well as the new labels create by the networks can now be used to train one final network that detects and classifies all of the desired objects.</p>
+
+<p>To reduce the labeling effort even more, a pipeline was created to augment labeled images. This included rotation, translation, shear, scale and change in brightness. Each image was augmented 9 times and was used to train the networks. A sample augmentation is shown above.</p>
+
+
+</p>
+
+
+<p><a href="/">Back to all Projects</a>
+
+</p>
+<br>
+
+
+
+    </div>
+</body>
+
+</html>
+

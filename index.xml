@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Apr 2018 11:13:20 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Aerial Manipulation System</title>
+      <link>/projects/aerial_system/</link>
+      <pubDate>Mon, 30 Apr 2018 11:13:20 +0000</pubDate>
+      
+      <guid>/projects/aerial_system/</guid>
+      <description>&lt;p&gt;The main goal of this project is to assemble a specified structure, such as a wall, by using a UAV equipped with a manipulator. This system will compete in the third challenge of the MBZIRC competition in Abu Dhabi in February 2020. It makes use of a hexcopter running Pixhawk as a flight controller, an Intel NUC as the main computer and a custom designed manipulator arm attached at the bottom of the drone.&lt;/p&gt;
+
+&lt;p&gt;The overall strategy to build such a structure is as follows: The UAV will identify the location of the blocks with YOLO and will use GPS to navigate to the general region of interest. It then visual servos towards the desired block and grasps it with the electromagnet attached to the manipulator at the bottom of the drone. Similarly, the system uses GPS again to get to the location to build the structure. Finally, it uses a modified visual servoing algorithm to assemble the wall block by block.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LoCoBot</title>
+      <link>/projects/loCoBot/</link>
+      <pubDate>Mon, 30 Apr 2018 11:13:20 +0000</pubDate>
+      
+      <guid>/projects/loCoBot/</guid>
+      <description>&lt;p&gt;This project was all about exploring what can be done with a low cost robot that does not have the accuracy and precision of a industrial manipulator. First, forward and inverse kinematics were implemented such that the arm can move to any given x-y-z position in its reach. Next, a vision pipeline using a Realsense was implemented. It was able to segment out green, blue and red blocks based on their color and shape and determined its location in the robot frame. With this method, it was possible to grasp these blocks and place them at desired locations.&lt;/p&gt;
+
+&lt;p&gt;However, due to the inaccuracy of the arm, this was not satisfying since the arm did not always grasp the blocks in the middle, which lead to errors while placing them. To improve this, visual servoing was implemented using a second camera attached at the wrist of the arm. The manipulator was now able to go to a roughly correct location from the vision algorithm, to servo towards the center of the block until it converged and to grasp it in the middle.&lt;/p&gt;
+
+&lt;p&gt;Finally, a similar method was used the analyze a given block structure on one side of the robot and replicate it on the other side of the arm using all methods described above. The robot detects the location of each block using the real sense. It then identifies their exact locations with visual servoing and adds an offset to them to shift them to the other side of the robot. At last, it picks them up using visual servoing and places them at the new desired locations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object Recognition with Faster R-CNN</title>
+      <link>/projects/object_reco/</link>
+      <pubDate>Mon, 30 Apr 2018 11:13:20 +0000</pubDate>
+      
+      <guid>/projects/object_reco/</guid>
+      <description>&lt;p&gt;The main goal of this project was to detect and classify objects that are typically seen in warehouses, such as pallets, forklifts and boxes. These detections can then be further used for navigation or manipulation tasks. To achieve this, it was decided to use Faster R-CNN, since it has shown promising results in the community and performs well in terms of accuracy as well as speed.&lt;/p&gt;
+
+&lt;p&gt;First, one network was trained for each object. Once these networks perform relatively well, they can be used to create more labeled data, since the network is now able to reliable label images by itself. All of the previously labeled data as well as the new labels create by the networks can now be used to train one final network that detects and classifies all of the desired objects.&lt;/p&gt;
+
+&lt;p&gt;To reduce the labeling effort even more, a pipeline was created to augment labeled images. This included rotation, translation, shear, scale and change in brightness. Each image was augmented 9 times and was used to train the networks. A sample augmentation is shown above.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hip Exoskeleton</title>
+      <link>/projects/exosceleton/</link>
+      <pubDate>Mon, 30 Apr 2018 11:13:20 +0000</pubDate>
+      
+      <guid>/projects/exosceleton/</guid>
+      <description>&lt;p&gt;The purpose of this project was to investigate how a hip exoskeleton can prevent falling in elderly. First, a Neuromuscular Locomotion Model was implemented in MATLAB Simulink consisting of three layers: The body-mechanical layer simulates the body parts, such as thigh, foot and a torso. These are connected with revolute joins. The second layer is the muscle actuation layer, which consists of seven hill-type muscles that produce their own force in the model. Finally, there is the neural control layer, that receives feedback from the first layer and uses this information to calculate the muscle stimulation for the second layer.&lt;/p&gt;
+
+&lt;p&gt;The two main reasons why people fall are muscle deterioration and a slower transmission of neural signals in the body. The muscle deterioration was simulated by decreasing the maximal force that can be applied by each muscle. The neural delay was simulated by a time delay of the simulated neural signal from the neural control layer to the muscle actuation layer. This lead to gait instability.&lt;/p&gt;
+
+&lt;p&gt;Finally, a PD controller at the hip was implemented that simulates a hip exoskeleton. The controller uses the feedback from the joints and adds the additional torque that is needed to produce stable walking.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Landing Gear Bearing Test Machine</title>
+      <link>/projects/bear_machine/</link>
+      <pubDate>Mon, 30 Apr 2018 11:13:20 +0000</pubDate>
+      
+      <guid>/projects/bear_machine/</guid>
+      <description>&lt;p&gt;The goal of this project was to design a test bench that simulates the wear of an airplane&amp;rsquo;s landing gear bearing when it lands. This wear is caused by two main things: During landing, the landing gear compresses and a large rod slides along the bearing. Due to the landing impact, there is also a large radial load applied on the bearing. The combination of the two causes wear and the bearing has to be switched out after a certain amount of cycles. However, the number of cycles is hard to estimate by theoretical analysis, which explains the need for this test bench.&lt;/p&gt;
+
+&lt;p&gt;The system consists of two major mechanisms. The sliding of the rod is caused by a slider-crank mechanism, which is driven by a strong motor. The rod is guided by the test bearing as well two additional bearings on both sides of the test  bearing. There is also the need to apply a force of up to 3000 lbs on the test bearing to simulate the radial load during landing. This was achieved by two double-acting pneumatic cylinder stacked on top of each other to reduce the footprint. It was controlled by an electric solenoid valve via LABVIEV.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/projects/aerial_system/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/loCoBot/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/object_reco/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/exosceleton/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/bear_machine/</loc>
+    <lastmod>2018-04-30T11:13:20+00:00</lastmod>
+  </url>
+  
+</urlset>

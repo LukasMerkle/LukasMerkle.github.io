@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lukas Merkle</title>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/3-col-portfolio.css" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
+
+  <script type='text/javascript' src='/js/jquery.min.js'></script>
+  <script type='text/javascript' src='/js/bootstrap.bundle.min.js'></script>
+  <script type='text/javascript' src='/js/jquery.mobile.customized.min.js'></script>
+  <script type='text/javascript' src='/js/jquery.easing.1.3.js'></script> 
+  <script type='text/javascript' src='/js/camera.js'></script> 
+  <script type='text/javascript' src='/js/carosel.js'></script> 
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script type='text/javascript' src='/js/responsive_youtube.js'></script>
+
+  
+  
+
+
+  <link rel='stylesheet' id='camera-css'  href='/css/camera.css' type='text/css' media='all'> 
+  <link rel='stylesheet' href='/css/carosel.css' type='text/css' media='all'> 
+
+  
+  
+</head>
+
+
+
+<body>
+<div class="content" id="content">
+<p><a href="/">Back to all Projects</a>
+
+</p>
+<br>
+
+
+
+<h2>LoCoBot</h2>
+
+
+<h3>My Contribution Highlights</h3>
+<ul>
+  
+  <li>Developed control algorithms of a 5 DoF robotic arm to perform manipulation tasks</li>
+
+  <li>Implemented vision system to identify small blocks‘ center, orientation and color</li>
+
+  <li>Improved robot“s precision by adding visual servoing towards the center of blocks</li>
+
+  <li>Combined implementations to perform scene analysis of a given structure to rebuild it on the other side of the robot</li>
+
+</ul>
+
+
+
+<div class="container-fluid media-gallery-container">
+  <div id="myCarousel" class="carousel slide media-gallery"
+    data-ride="carousel" data-interval=false>
+    <div class="carousel-inner row w-100 mx-auto">
+        
+        <div class="carousel-item col-md-4
+        
+          active 
+        
+          ">
+          <div class="card">
+            
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/T2Kym57aCQA" frameborder="0" allowfullscreen  allow="autoplay; encrypted-media" ></iframe>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Demonstration of block stacking, scene analysis and reconstruction of block configuration</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item col-md-4
+        
+          ">
+          <div class="card">
+            
+              <img class="card-img-top img-fluid" src="/images/mask.png"
+            height=600>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Mask from block segmentation based on color and contour</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item col-md-4
+        
+          ">
+          <div class="card">
+            
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/w3A3Ud1HF5o" frameborder="0" allowfullscreen  allow="autoplay; encrypted-media" ></iframe>
+            
+            <div class="card-body">
+              
+              <p class="card-text">Implementation of a RRT Planner in Simulation</p>
+              
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<h3>Project Info</h3>
+<ul>
+  
+    <li>Robot Type: 5 DoF Manipulator Arm</li>
+    <li>Application: Manipulation of small objects</li>
+  
+  <li>Organization: 
+    
+      
+      Robot Autonomy course, Carnegie Mellon University
+      
+
+      
+    
+  
+  </li>
+  
+    <li>Personal Role: Computer Vision and Control Engineer, February 2019 – May 2019</li>
+  
+</ul>
+
+
+
+<h3>More About My Experience</h3>
+<p>
+  <p>This project was all about exploring what can be done with a low cost robot that does not have the accuracy and precision of a industrial manipulator. First, forward and inverse kinematics were implemented such that the arm can move to any given x-y-z position in its reach. Next, a vision pipeline using a Realsense was implemented. It was able to segment out green, blue and red blocks based on their color and shape and determined its location in the robot frame. With this method, it was possible to grasp these blocks and place them at desired locations.</p>
+
+<p>However, due to the inaccuracy of the arm, this was not satisfying since the arm did not always grasp the blocks in the middle, which lead to errors while placing them. To improve this, visual servoing was implemented using a second camera attached at the wrist of the arm. The manipulator was now able to go to a roughly correct location from the vision algorithm, to servo towards the center of the block until it converged and to grasp it in the middle.</p>
+
+<p>Finally, a similar method was used the analyze a given block structure on one side of the robot and replicate it on the other side of the arm using all methods described above. The robot detects the location of each block using the real sense. It then identifies their exact locations with visual servoing and adds an offset to them to shift them to the other side of the robot. At last, it picks them up using visual servoing and places them at the new desired locations.</p>
+
+
+</p>
+
+
+<p><a href="/">Back to all Projects</a>
+
+</p>
+<br>
+
+
+
+    </div>
+</body>
+
+</html>
+
